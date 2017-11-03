@@ -84,6 +84,7 @@ void WifiAPMode(boolean state)
 //********************************************************************************
 boolean WifiConnect(byte connectAttempts)
 {
+  WiFi.setOutputPower(19);
   String log = "";
   char hostname[40];
   strncpy(hostname, WifiGetHostname().c_str(), sizeof(hostname));
